@@ -1,15 +1,14 @@
-import { Sequelize } from "sequelize/types"
+import { Sequelize } from "sequelize";
 
 const sequelizeConnection = new Sequelize('sistemaDeNotasFiscais', 'root', 'root', {
     host: 'localhost',
     dialect: 'mysql'
 });
 
-try {
-    sequelizeConnection.authenticate()
-    console.log("Connection has estabilished.")
-} catch (error) {
-    console.log(`Connection failure. Error: ${error}`);
-}
+sequelizeConnection.authenticate().then(() => {
+    console.log("Connection estabilished.")
+}).catch(() => {
+    console.log("Connection failed.")
+})
 
 export default sequelizeConnection;
