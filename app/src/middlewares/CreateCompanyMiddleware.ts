@@ -8,6 +8,7 @@ export async function CreateCompanyMiddleware(req: Request, res: Response, next:
     const data: ICompany = req.body;
 
     try {
+
         const errors: Object[] = await ValidateCompanyDataUseCase.execute(data)
     
         if (errors) {
@@ -15,9 +16,11 @@ export async function CreateCompanyMiddleware(req: Request, res: Response, next:
         }
     
         return next();
+
     } catch (error) {
         
-        return res.status(500).json({ message: "Um erro interno ocorreu." })
+        return res.status(500).json({ message: "A razão social pertence a outra pessoa." })
 
     }
+    
 }

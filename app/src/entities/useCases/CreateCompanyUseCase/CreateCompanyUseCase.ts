@@ -1,5 +1,7 @@
 import { uuid } from "uuidv4";
 import Empresa from "../../Empresa";
+import { CheckIfCompanyAlreadyExistsUseCase } from "../CheckIfCompanyAlreadyExistsUseCase/CheckIfCompanyAlreadyExistsUseCase";
+import { ValidateCompanyDataUseCase } from "../ValidateCompanyDataUseCase/ValidateCompanyDataUseCase";
 
 export interface ICompany {
     razaoSocial: string;
