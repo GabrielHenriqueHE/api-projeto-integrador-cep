@@ -1,7 +1,7 @@
 import { Sequelize } from "sequelize";
 
-const sequelizeConnection = new Sequelize('sql10500217', 'sql10500217', 'V6hRgMh88u', {
-    host: 'sql10.freemysqlhosting.net',
+const sequelizeConnection = new Sequelize('sistemaDeNotasFiscais', 'root', 'root', {
+    host: 'localhost',
     dialect: 'mysql'
 });
 
