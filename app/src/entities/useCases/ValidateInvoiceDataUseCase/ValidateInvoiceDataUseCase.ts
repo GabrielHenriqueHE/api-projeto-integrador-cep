@@ -1,4 +1,5 @@
 import Empresa from "../../Empresa";
+import NotaFiscal from "../../NotaFiscal";
 import { IInvoice } from "../CreateInvoiceUseCase/CreateInvoiceUseCase";
 
 export class ValidateInvoiceDataUseCase {
