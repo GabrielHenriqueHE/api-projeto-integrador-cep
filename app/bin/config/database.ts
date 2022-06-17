@@ -1,11 +1,8 @@
 import { Sequelize } from "sequelize";
 
-const port = Number(process.env.PORT) || 3306;
-
 const sequelizeConnection = new Sequelize('sistemaDeNotasFiscais', 'root', 'root', {
     host: 'localhost',
-    dialect: 'mysql',
-    port: port
+    dialect: 'mysql'
 });
 
 sequelizeConnection.authenticate().then(() => {
