@@ -30,7 +30,7 @@ export class ValidateInvoiceDataUseCase {
             errors.push({ message: "Número de caracteres inválido. Verifique se você inseriu menos que 5 ou mais que 40 caracteres." })
         }
 
-        if (errors.length > 1) {
+        if (errors.length >= 1) {
             return errors;
         } else return false;
         
