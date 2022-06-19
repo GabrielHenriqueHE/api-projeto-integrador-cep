@@ -1,11 +1,13 @@
+import Empresa from "../../Empresa";
 import NotaFiscal from "../../NotaFiscal";
 
 export async function ReturnInvoicesUseCase(): Promise<any> {
 
-    const invoices = await NotaFiscal.findAll({  })
+    const invoices = await NotaFiscal.findAll({ })
+    const companies = await Empresa.findAll({ })
 
     if (invoices.length >= 1) {
-        return invoices;
+        return { invoices, companies };
     } else return false;
 
 }
