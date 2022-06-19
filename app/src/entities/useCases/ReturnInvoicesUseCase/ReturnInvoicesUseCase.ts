@@ -7,7 +7,7 @@ export async function ReturnInvoicesUseCase(): Promise<any> {
     const companies = await Empresa.findAll({ })
 
     if (invoices.length >= 1) {
-        return { invoices, companies };
+        return { invoices: invoices, companies: companies };
     } else return false;
 
 }
