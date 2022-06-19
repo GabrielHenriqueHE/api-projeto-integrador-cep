@@ -18,7 +18,6 @@ const Empresa = database_1.default.define("empresa", {
     razaoSocial: {
         type: (0, sequelize_1.STRING)(60),
         allowNull: false,
-        unique: true
     },
     nomeFantasia: {
         type: (0, sequelize_1.STRING)(60),

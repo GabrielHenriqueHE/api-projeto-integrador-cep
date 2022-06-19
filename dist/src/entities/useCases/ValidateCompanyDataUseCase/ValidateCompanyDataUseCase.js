@@ -37,7 +37,7 @@ class ValidateCompanyDataUseCase {
         if (uf.length != 2) {
             errors.push({ message: "Número de caracteres inválido. A UF deve conter 2 caracteres." });
         }
-        if (errors.length > 1) {
+        if (errors.length >= 1) {
             return errors;
         }
         else

@@ -12,7 +12,7 @@ async function CreateCompanyMiddleware(req, res, next) {
         return next();
     }
     catch (error) {
-        return res.status(500).json({ message: "A razão social pertence a outra pessoa." });
+        return res.status(500).json({ message: "Um erro interno ocorreu." });
     }
 }
 exports.CreateCompanyMiddleware = CreateCompanyMiddleware;
